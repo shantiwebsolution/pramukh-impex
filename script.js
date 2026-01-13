@@ -1,10 +1,30 @@
 $(document).ready(function() {
-    // Hero background image rotation
-    const heroImages = ['assets/1/1.jpg', 'assets/1/2.jpg'];
-    const randomImage = heroImages[Math.floor(Math.random() * heroImages.length)];
-    $('.hero').css('background-image',
-        'linear-gradient(135deg, rgba(248,249,250,0.8) 0%, rgba(233,236,239,0.8) 100%), url(' + randomImage + ')'
-    );
+    // Hero background image rotation - auto-detects images in assets/1/
+    (function loadHeroImages() {
+        const basePath = 'assets/1/';
+        const validImages = [];
+        let index = 1;
+
+        function checkImage(idx) {
+            const img = new Image();
+            img.onload = function() {
+                validImages.push(basePath + idx + '.jpg');
+                checkImage(idx + 1);
+            };
+            img.onerror = function() {
+                // No more images, apply random one
+                if (validImages.length > 0) {
+                    const randomImage = validImages[Math.floor(Math.random() * validImages.length)];
+                    $('.hero').css('background-image',
+                        'linear-gradient(135deg, rgba(248,249,250,0.8) 0%, rgba(233,236,239,0.8) 100%), url(' + randomImage + ')'
+                    );
+                }
+            };
+            img.src = basePath + idx + '.jpg';
+        }
+
+        checkImage(index);
+    })();
 
     // Smooth scrolling for nav links
     $('a[href^="#"]').on('click', function(event) {
