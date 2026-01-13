@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    // Hero background image rotation
+    const heroImages = ['assets/1/1.jpg', 'assets/1/2.jpg'];
+    const randomImage = heroImages[Math.floor(Math.random() * heroImages.length)];
+    $('.hero').css('background-image',
+        'linear-gradient(135deg, rgba(248,249,250,0.8) 0%, rgba(233,236,239,0.8) 100%), url(' + randomImage + ')'
+    );
+
     // Smooth scrolling for nav links
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
