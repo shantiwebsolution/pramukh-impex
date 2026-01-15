@@ -553,20 +553,21 @@ section {
 
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 80px;
         left: 0;
         width: 100%;
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         background-color: #fff;
         flex-direction: column;
         gap: 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-        transition: height 0.3s;
+        transition: max-height 0.3s ease-out;
+        z-index: 999;
     }
 
     .nav-menu.active {
-        height: auto;
+        max-height: 400px;
         padding: 20px;
     }
 
