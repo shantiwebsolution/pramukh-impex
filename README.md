@@ -43,4 +43,4 @@ No server setup is required; it works directly from the file system.
 
 ## Contact
 
-For inquiries, visit the contact section or email info@pramukhimpex.com.
+For inquiries, visit the contact section or email info@pramukhimpex.co.in
