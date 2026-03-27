@@ -155,7 +155,7 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.8) 100%), url('assets/1/1.jpg');
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.4) 0%, rgba(233, 236, 239, 0.4) 100%), url('assets/p-img/5.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -165,13 +165,13 @@ section {
 
 .hero h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #000;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #666;
+    color: #444;
 }
 
 .cta-buttons {
@@ -182,7 +182,7 @@ section {
 }
 
 .highlights {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(233, 236, 239, 0.9) 100%), url('https://picsum.photos/1920/800?random=factory');
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(233, 236, 239, 0.9) 100%), url('assets/p-img/2.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
