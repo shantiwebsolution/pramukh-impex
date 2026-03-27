@@ -617,19 +617,19 @@ section {
 
     .navbar {
         position: relative;
-        min-height: 60px;
+        min-height: 75px;
         padding: 10px 0;
     }
 
     .logo {
         position: absolute;
-        left: 15px;
+        left: 7px;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .logo-img {
-        height: 35px;
+        height: 60px;
     }
 
     .hamburger {
